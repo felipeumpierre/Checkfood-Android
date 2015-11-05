@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="#bbdefb"
+    tools:context="com.checkfood.activity.MenuPrincipal"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CARDÁPIO"
+        android:id="@+id/btnCardapio"
+        android:background="@drawable/button_fb_gb"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="0.10"
+        android:onClick="listarCardapio"
+        android:textColor="#fafafa"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PEDIDO"
+        android:id="@+id/btnPedido"
+        android:layout_below="@+id/btnCardapio"
+        android:background="@drawable/button_fb_gb"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.10"
+        android:layout_marginTop="30dp"
+        android:onClick="visualizarPedido"
+        android:textColor="#fafafa"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PAGAMENTO"
+        android:id="@+id/btnPagamento"
+        android:background="@drawable/button_fb_gb"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10"
+        android:layout_marginTop="30dp"
+        android:textColor="#fafafa"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="AVALIAR RESTAURANTE"
+        android:id="@+id/btnFaleConosco"
+        android:background="@drawable/button_fb_gb"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="0.10"
+        android:layout_marginTop="30dp"
+        android:textColor="#fafafa"
+        android:textStyle="bold"
+        android:onClick="rateRestaurant" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CHAMAR GARÇOM"
+        android:id="@+id/btnChamarGarcom"
+        android:background="@drawable/button_fb_gb"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="0.10"
+        android:layout_marginTop="30dp"
+        android:textColor="#fafafa"
+        android:textStyle="bold" />
+
+</LinearLayout>
