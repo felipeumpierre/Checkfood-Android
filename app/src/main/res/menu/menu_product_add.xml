@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.checkfood.activity.ProductAdd">
+
+    <item
+        android:id="@+id/menu"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sair"
+        android:orderInCategory="100"
+        android:title="Sair"
+        app:showAsAction="never" />
+</menu>
