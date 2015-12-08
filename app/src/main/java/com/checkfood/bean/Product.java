@@ -77,6 +77,7 @@ public class Product implements Serializable{
         switch (position){
 
             case 0:
+<<<<<<< HEAD
                 return(R.drawable.file_recheado);
             case 1:
                 return(R.drawable.file_rahmshinitzel);
@@ -108,6 +109,39 @@ public class Product implements Serializable{
                 return(R.drawable.file_grelhado_molho_barbecue);
             case 15:
                 return(R.drawable.file_grelhado_molho_requefort);
+=======
+                return(R.drawable.pastel);
+            case 1:
+                return(R.drawable.queijocoalho);
+            case 2:
+                return(R.drawable.salsichaespecial);
+            case 3:
+                return(R.drawable.coxinha);
+            case 4:
+                return(R.drawable.batatafrita);
+            case 5:
+                return(R.drawable.cheesecordeiro);
+            case 6:
+                return(R.drawable.cheeseburgermadero);
+            case 7:
+                return(R.drawable.combobaconsuper);
+            case 8:
+                return(R.drawable.combosupermadero);
+            case 9:
+                return(R.drawable.cheesebacon);
+            case 10:
+                return(R.drawable.maderofit);
+            case 11:
+                return(R.drawable.cheesevegetariano);
+            case 12:
+                return(R.drawable.combocentralpark);
+            case 13:
+                return(R.drawable.combotradicional);
+            case 14:
+                return(R.drawable.petitgateau);
+            case 15:
+                return(R.drawable.minimousse);
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
             default:
                 return 0;
         }

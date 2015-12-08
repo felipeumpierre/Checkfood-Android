@@ -35,11 +35,14 @@ public class ProductRequestAdapter extends BaseAdapter {
         return lista.get(position);
     }
 
+<<<<<<< HEAD
     public void removeItem(int position){
         lista.remove(position);
         //notifyDataSetChanged();
     }
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     @Override
     public long getItemId(int position) {
         return position;

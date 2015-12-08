@@ -1,10 +1,15 @@
 package com.checkfood.activity;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+=======
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,20 +34,26 @@ public class ProductAdd extends ActionBarActivity {
     ArrayList<RequestProduct> requestProducts = new ArrayList<>();
     NumberPicker qtd =null;
 
+<<<<<<< HEAD
     private static String TAG = "LOG";
     private Toolbar mToolbar;
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_add);
 
+<<<<<<< HEAD
         mToolbar = (Toolbar) findViewById(R.id.tb_main);
         mToolbar.setTitle("Adicionar Pedido");
         mToolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         mToolbar.setLogo(R.drawable.food);
         setSupportActionBar(mToolbar);
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         Intent it = getIntent();
         Bundle params = it.getExtras();
         board = (Board) params.getSerializable("board");

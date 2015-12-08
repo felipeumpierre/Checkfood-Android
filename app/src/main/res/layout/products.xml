@@ -17,7 +17,11 @@
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:id="@+id/imgProduct"
+<<<<<<< HEAD
             android:src="@drawable/file_recheado" />
+=======
+            android:src="@drawable/pastel" />
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
         <TextView
             android:layout_width="match_parent"

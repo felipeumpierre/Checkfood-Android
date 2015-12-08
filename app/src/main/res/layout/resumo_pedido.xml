@@ -1,11 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+<<<<<<< HEAD
     android:layout_height="fill_parent"
     android:orientation="vertical"
+=======
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     android:background="#bbdefb"
     tools:context="com.checkfood.activities.ResumoPedido"
     android:weightSum="1">
 
+<<<<<<< HEAD
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -26,21 +35,51 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
+=======
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         android:layout_weight="1">
 
         <ListView
             android:layout_width="fill_parent"
+<<<<<<< HEAD
             android:layout_height="fill_parent"
             android:id="@+id/lv"
             android:layout_alignParentBottom="false"
             android:clickable="false" />
+=======
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewPratos"
+            android:layout_weight="0.56"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/txtBoard" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Board"
+            android:id="@+id/txtBoard"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:paddingTop="10dp" />
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
+<<<<<<< HEAD
         android:layout_height="105dp"
         android:layout_marginTop="10dp">
+=======
+        android:layout_height="84dp">
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
         <TextView
             android:layout_width="fill_parent"
@@ -48,10 +87,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Total a Pagar: R$"
             android:id="@+id/txtTotalPagar"
+<<<<<<< HEAD
             android:textStyle="italic"
             android:typeface="serif"
             android:gravity="center_horizontal"
             android:layout_alignParentTop="false" />
+=======
+            android:gravity="center_horizontal"
+            android:textStyle="italic"
+            android:typeface="serif" />
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
         <Button
             android:layout_width="fill_parent"
@@ -65,11 +110,15 @@
             android:layout_alignParentStart="true"
             android:textStyle="normal|bold"
             android:onClick="finalizarPedido"
+<<<<<<< HEAD
             android:textColor="#fafafa"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp" />
+=======
+            android:textColor="#fafafa" />
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
     </RelativeLayout>
 

@@ -1,7 +1,10 @@
 package com.checkfood.http;
 
+<<<<<<< HEAD
 import android.util.Log;
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -25,10 +28,16 @@ public class HttpConnection {
 
         try{
             ArrayList<NameValuePair> valores = new ArrayList<NameValuePair>();
+<<<<<<< HEAD
             valores.add(new BasicNameValuePair("",data));
             Log.i("Script", "Url: " + httpPost.getURI());
             Log.i("Script","Method: "+httpPost.getMethod());
             Log.i("Script", "Json: " + valores.toString());
+=======
+            valores.add(new BasicNameValuePair("method",method));
+            valores.add(new BasicNameValuePair("json", data));
+
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
             httpPost.setEntity(new UrlEncodedFormEntity(valores));
             HttpResponse resposta = httpClient.execute(httpPost);
             answer = EntityUtils.toString(resposta.getEntity());

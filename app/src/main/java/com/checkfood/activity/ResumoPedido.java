@@ -1,5 +1,6 @@
 package com.checkfood.activity;
 
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,11 +9,20 @@ import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+=======
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,12 +38,17 @@ import senac.checkfood.R;
 
 public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
 
+<<<<<<< HEAD
     private static String TAG = "LOG";
     private Toolbar mToolbar;
 
     Request request = new Request();
     DecimalFormat df = new DecimalFormat("##0.00");
     double total = 0;
+=======
+    Request request = new Request();
+    DecimalFormat df = new DecimalFormat("##0.00");
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +59,21 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
         Bundle params = it.getExtras();
         request = (Request) params.getSerializable("request");
 
+<<<<<<< HEAD
         mToolbar = (Toolbar) findViewById(R.id.tb_main);
         mToolbar.setTitle("Pedido Mesa "+request.getBoard().getNumber());
         mToolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         mToolbar.setLogo(R.drawable.checkbox_marked_outline);
         setSupportActionBar(mToolbar);
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         exibirPedido();
     }
 
     public void exibirPedido(){
 
+<<<<<<< HEAD
         final ListView lv = (ListView) findViewById(R.id.lv);
         lv.setAdapter(new ProductRequestAdapter(this, request.getListRequestProduct()));
 
@@ -92,6 +111,20 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
         for(int i=0; i<request.getListRequestProduct().size();i++){
             total = total + request.getListRequestProduct().get(i).getProduct().getPrice() * request.getListRequestProduct().get(i).getQuantity();
         }
+=======
+        double total = 0;
+
+        TextView selectedBoard = (TextView) findViewById(R.id.txtBoard);
+        selectedBoard.setText("MESA " + request.getBoard().getNumber());
+
+        ListView lv = (ListView) findViewById(R.id.listViewPratos);
+        lv.setAdapter(new ProductRequestAdapter(this, request.getListRequestProduct()));
+
+        for(int i=0; i<request.getListRequestProduct().size();i++){
+            total = total + request.getListRequestProduct().get(i).getProduct().getPrice() * request.getListRequestProduct().get(i).getQuantity();
+        }
+
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         TextView totalPagar = (TextView) findViewById(R.id.txtTotalPagar);
         totalPagar.setText("Total a Pagar R$ " + df.format(total));
     }
@@ -99,7 +132,12 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
     public void finalizarPedido(View view){
         String json = generateJson(request);
         Tarefa tarefa = new Tarefa(this,this);
+<<<<<<< HEAD
         tarefa.execute("http://api-checkfood.rhcloud.com/api/order/board/"+request.getBoard().getId(),"", json);
+=======
+        Log.i("Script","Url ->"+ "http://api-checkfood.rhcloud.com/api/order/board/"+request.getBoard().getId()+"/");
+        tarefa.execute("http://api-checkfood.rhcloud.com/api/order/board/"+request.getBoard().getId()+"/", "POST", json);
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     }
 
     public String generateJson(Request request){
@@ -119,14 +157,21 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
         catch(JSONException e){
             e.printStackTrace();
         }
+<<<<<<< HEAD
+=======
+        Log.i("Script", "Json array pedido -> " + ja.toString());
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         return ja.toString();
     }
 
     @Override
     public void retornoWB(String string) {
+<<<<<<< HEAD
 
         Log.i("Script","Retorno json-> "+string);
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         Context context = getApplicationContext();
         String mensagem = "Pedido enviado com Sucesso!";
         int duracao = Toast.LENGTH_LONG;
@@ -149,6 +194,7 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+<<<<<<< HEAD
         int id = item.getItemId();
 
         if(id == R.id.menu){
@@ -161,6 +207,17 @@ public class ResumoPedido extends ActionBarActivity implements TarefaInterface {
 
         }
 
+=======
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         return super.onOptionsItemSelected(item);
     }
 }

@@ -6,6 +6,7 @@
     android:gravity="top">
 
     <TableRow
+<<<<<<< HEAD
         android:layout_width="fill_parent"
         android:layout_height="55dp"
         android:weightSum="1">
@@ -13,12 +14,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+=======
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkBoxProducts"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Product"
             android:id="@+id/txtNome"
             android:textStyle="bold"
             android:textSize="16dp"
+<<<<<<< HEAD
             android:layout_weight="0.11" />
+=======
+            android:paddingTop="10dp" />
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
     </TableRow>
 

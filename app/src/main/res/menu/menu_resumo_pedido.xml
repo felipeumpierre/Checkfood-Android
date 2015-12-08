@@ -1,5 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ResumoPedido">
     <item
@@ -18,3 +19,9 @@
         android:title="Sair"
         app:showAsAction="never" />
 </menu>
+=======
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.checkfood.activity.ResumoPedido">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357

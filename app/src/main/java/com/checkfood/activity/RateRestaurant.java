@@ -1,5 +1,6 @@
 package com.checkfood.activity;
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -31,6 +32,19 @@ public class RateRestaurant extends ActionBarActivity implements TarefaInterface
 
     private static String TAG = "LOG";
     private Toolbar mToolbar;
+=======
+import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.checkfood.bean.Board;
+
+import senac.checkfood.R;
+
+public class RateRestaurant extends ActionBarActivity {
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 
     Board board = new Board();
 
@@ -42,6 +56,7 @@ public class RateRestaurant extends ActionBarActivity implements TarefaInterface
         Intent it = getIntent();
         Bundle params = it.getExtras();
         board = (Board) params.getSerializable("board");
+<<<<<<< HEAD
 
         mToolbar = (Toolbar) findViewById(R.id.tb_main);
         mToolbar.setTitle("Avalie o Local");
@@ -101,6 +116,8 @@ public class RateRestaurant extends ActionBarActivity implements TarefaInterface
         params.putSerializable("board",board);
         it.putExtras(params);
         startActivity(it);
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     }
 
     @Override

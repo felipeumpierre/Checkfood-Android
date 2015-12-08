@@ -1,11 +1,16 @@
 package com.checkfood.activity;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+=======
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,21 +32,27 @@ public class ProductDeital extends ActionBarActivity {
     Board board = new Board();
     public ArrayList<RequestProduct> requestProduct = new ArrayList<>();
 
+<<<<<<< HEAD
     private static String TAG = "LOG";
     private Toolbar mToolbar;
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_deital);
 
+<<<<<<< HEAD
         mToolbar = (Toolbar) findViewById(R.id.tb_main);
         mToolbar.setTitle("Detalhes");
         mToolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         mToolbar.setLogo(R.drawable.food);
         setSupportActionBar(mToolbar);
 
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         Intent it = getIntent();
         board = (Board) it.getSerializableExtra("board");
         requestProduct = (ArrayList<RequestProduct>)it.getSerializableExtra("requestProduct");
@@ -53,6 +64,12 @@ public class ProductDeital extends ActionBarActivity {
         TextView deitalName = (TextView) findViewById(R.id.detailName);
         deitalName.setText(product.getName());
 
+<<<<<<< HEAD
+=======
+        TextView deitalDescription = (TextView) findViewById(R.id.deitalDescription);
+        deitalDescription.setText("Categoria: "+ product.getCategory().getName());
+
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
         TextView deitalPrice = (TextView) findViewById(R.id.deitalPrice);
         deitalPrice.setText("Valor: R$ " + df.format(product.getPrice()));
 
@@ -68,6 +85,10 @@ public class ProductDeital extends ActionBarActivity {
         image.setImageResource(product.getImage(position));
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
     public void buttonAdd(View view) {
         Intent it = new Intent(ProductDeital.this, ProductAdd.class);
         Bundle params = new Bundle();
@@ -77,6 +98,7 @@ public class ProductDeital extends ActionBarActivity {
         it.putExtras(params);
         startActivity(it);
     }
+<<<<<<< HEAD
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,4 +106,6 @@ public class ProductDeital extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_product_deital, menu);
         return true;
     }
+=======
+>>>>>>> fb130ec6ebe1a2923c345a67f130dd6005867357
 }
